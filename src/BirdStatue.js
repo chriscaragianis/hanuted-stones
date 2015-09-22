@@ -10,7 +10,7 @@ var BirdStatue = function BirdStatue() {
 
   this.advance = function() {
     this.clock = (this.clock + 1) % 256;
-    if (this.flying) {
+    if (this.flying && this.clock % 4 === 0) {
       this.frame[1] = (this.frame[1] + 1) % 3;
     }
     if (this.talking) {
