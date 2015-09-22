@@ -13,7 +13,7 @@ var BirdStatue = function BirdStatue() {
     if (this.flying && this.clock % 4 === 0) {
       this.frame[1] = (this.frame[1] + 1) % 3;
     }
-    if (this.talking) {
+    if (this.talking && this.clock % 5 === 0) {
       this.frame[2] = (this.frame[2] + 1) % 2;
     }
 
@@ -33,4 +33,7 @@ var BirdStatue = function BirdStatue() {
     return (this.frame[1] * 4) + this.frame[0];
   };
 
+  this.reset = function() {
+    this.frame = [0,0,0,0];
+  };
 };
