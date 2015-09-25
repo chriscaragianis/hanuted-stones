@@ -8,13 +8,10 @@ function preload() {
 
 function create() {
   game.world.setBounds(0,0,5600,600);
-
-  bird = game.add.sprite(400, 400, 'birdStatue');
-  bird.scale.setTo(1.5,1.5);
+  introFlight();
 }
 
 function update() {
-
   var cursors = game.input.keyboard.createCursorKeys();
   birdObj.flying = cursors.left.isDown;
   birdObj.talking = cursors.right.isDown;
